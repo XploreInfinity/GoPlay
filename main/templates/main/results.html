@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<div class="results-container">
+    <h3 class="cool-headers"> <span class="goplay">GoPlay>></span> These Titles!</h3>
+    <div class="game-cards">
+        {% for game in recommendedGames %}
+            <div class="game-card">
+                <div class="game-thumb">
+                    <img src="https://steamcdn-a.akamaihd.net/steam/apps/{{ game.0 }}//header.jpg" alt="game_thumb" />
+                </div>
+            <div class="game-card-col">
+                <div class="game-title">
+                    <h5>{{ game.1 }}</h5>
+                </div>
+                <div class="game-url">
+                    <a href="https://store.steampowered.com/app/{{ game.0 }}" target="blank"">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/768px-Steam_icon_logo.svg.png" class="steam-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="game-card-col">
+                <div class="game-dev">
+                    {{ game.2 }}
+                </div>
+                <div class="game-score">
+                    Rating: {{ game.4 }}%
+                </div>
+            </div>
+            <div class="game-genres">
+                {% for genre in game.3 %}
+                    <div class="game-genre">
+                        {{ genre }}
+                    </div>
+                {% endfor %}
+            </div>
+            
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

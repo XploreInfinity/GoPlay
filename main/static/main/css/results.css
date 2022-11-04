@@ -1,0 +1,52 @@
+.results-container h3{
+    text-align: center;
+}
+.goplay{
+    font-style: italic;
+}
+.game-cards{
+    display:flex;
+    flex-direction: row;
+    gap: 1em;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+.game-card{
+    border-radius: 15px;
+    border: 2px solid black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.game-thumb img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.game-title{
+    margin:0.2em;
+}
+.steam-logo{
+    margin:0.2em auto;
+    height:1.6em;
+    width: 1.6em;
+}
+.game-card-col{
+    display: flex;
+    flex-direction: row;
+    margin:auto 0.3em;
+    justify-content: space-between;
+}
+.game-genres{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    max-width: 450px;
+    gap: 0.3em;
+    margin: 0.3em;
+}
+.game-genre{
+    text-align: center;
+    border-radius: 15px;
+    padding:0.3em;
+    border: 1.5px solid rgba(0, 0, 0);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

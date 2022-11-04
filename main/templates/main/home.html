@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<form action="/" class="container form-container" method="POST">
+  {% csrf_token %}
+  <label for="pre_game"><h3 class="cool-headers">Mention a Game That You Played Previously and Really Liked</h3></label>
+  <input class="form-control" type="text" id="pre_game" name="fav_game" required>
+  <div>
+  <div class="col-auto btn-container">
+    <button type="submit" class="btn btn-primary mb-3">Discover cool new stuff</button>
+  </div>
+</form>
+{% endblock %}
